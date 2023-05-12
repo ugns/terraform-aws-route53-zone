@@ -31,7 +31,7 @@ module "www-website" {
 
 module "caa_record" {
   source  = "UGNS/route53-caa/aws"
-  version = "0.1.0"
+  version = "0.1.1"
 
   zone_id              = aws_route53_zone.this.id
   caa_issuers          = var.caa_issuers
