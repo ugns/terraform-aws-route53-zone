@@ -10,7 +10,7 @@ resource "aws_route53_zone" "this" {
 
 module "website" {
   source  = "cloudposse/s3-website/aws"
-  version = "0.17.11"
+  version = "0.18.0"
 
   hostname           = format("www.%s", aws_route53_zone.this.name)
   encryption_enabled = true
@@ -20,7 +20,7 @@ module "website" {
 
 module "www-website" {
   source  = "cloudposse/s3-website/aws"
-  version = "0.17.11"
+  version = "0.18.0"
 
   hostname                 = aws_route53_zone.this.name
   redirect_all_requests_to = module.website.hostname
