@@ -41,7 +41,7 @@ module "caa_record" {
 
 module "mta_sts" {
   source  = "ugns/route53-mta-sts/aws"
-  version = "0.1.0"
+  version = "0.1.1"
 
   zone_id              = aws_route53_zone.this.id
   tls_report_recipient = local.tls_report_recipient
