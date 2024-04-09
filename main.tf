@@ -53,7 +53,7 @@ module "mta_sts" {
 
 module "ses" {
   source  = "ugns/route53-ses/aws"
-  version = "0.1.0"
+  version = "0.1.1"
 
   zone_id   = aws_route53_zone.this.id
   topic_arn = aws_sns_topic.sns.arn
